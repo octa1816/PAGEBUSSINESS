@@ -1,158 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* Reset y fuentes */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f5f7fa;
-  color: #2b2d42;
+  background: linear-gradient(to bottom, #fdfcfa, #f1f5f8);
+  color: #1e1e1e;
   line-height: 1.6;
-  padding: 20px;
+  padding-bottom: 80px;
+  scroll-behavior: smooth;
 }
 
-/* ENCABEZADO */
 header {
-  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+  background: linear-gradient(135deg, #1A2980, #26D0CE);
   color: white;
-  padding: 30px 20px;
+  padding: 50px 20px;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease-out;
+  border-bottom: 5px solid #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
+}
+
+header .slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.9;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
+  list-style: none;
+  margin-top: 20px;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
-nav ul li a {
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 25px;
   transition: background 0.3s;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-/* SECCIONES */
 section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeInUp 1s ease-out;
 }
 
-section:hover {
-  transform: translateY(-3px);
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-h2 {
-  font-size: 1.8rem;
-  color: #2f80ed;
+section h2 {
+  color: #1A2980;
   margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 3px solid #26D0CE;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-ol {
-  padding-left: 20px;
-  margin-bottom: 20px;
+section ul {
+  margin-left: 20px;
+  list-style: disc;
+  color: #333;
 }
 
-ol li {
-  margin-bottom: 10px;
-}
-
-/* BOTONES */
-button {
-  background: #2f80ed;
+.btn-inscribirse {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00b09b, #96c93d);
   color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-  background: #1c60b3;
+.btn-inscribirse:hover {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
   transform: scale(1.05);
 }
 
-/* FORMULARIO */
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  font-size: 1rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-out;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  padding: 14px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #fefefe;
 }
 
-form textarea {
-  resize: vertical;
-  min-height: 120px;
+input:focus, textarea:focus {
+  border-color: #26D0CE;
+  box-shadow: 0 0 10px rgba(38, 208, 206, 0.3);
+  outline: none;
 }
 
-/* PIE DE PÁGINA */
+button[type="submit"] {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(to right, #5a67d8, #6b46c1);
+  transform: scale(1.05);
+}
+
 footer {
+  background: #1A2980;
+  color: white;
   text-align: center;
   padding: 20px;
-  background: #2f80ed;
-  color: white;
-  margin-top: 60px;
-  border-radius: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   font-size: 0.9rem;
+  animation: fadeIn 1.5s ease-in;
+  border-top: 4px solid #26D0CE;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
 
-  header h1 {
-    font-size: 1.7rem;
+  nav li {
+    margin: 10px 0;
   }
 
-  button {
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-inscribirse {
     width: 100%;
+    text-align: center;
   }
 }
-.btn-inscribirse {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #25D366;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s;
-    cursor: pointer;
-  }
-  
-  .btn-inscribirse:hover {
-    background: #128C7E;
-  }
-  
