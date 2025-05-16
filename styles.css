@@ -7,21 +7,20 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #fdfcfa, #f1f5f8);
-  color: #1e1e1e;
+  background: radial-gradient(circle at top left, #121212, #1c1c1c 70%);
+  color: #f5f5f5;
   line-height: 1.6;
   padding-bottom: 80px;
   scroll-behavior: smooth;
 }
 
 header {
-  background: linear-gradient(135deg, #1A2980, #26D0CE);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
-  padding: 50px 20px;
+  padding: 60px 30px;
   text-align: center;
   animation: fadeInDown 1s ease-out;
-  border-bottom: 5px solid #fff;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 @keyframes fadeInDown {
@@ -30,14 +29,14 @@ header {
 }
 
 header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 header .slogan {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: italic;
-  opacity: 0.9;
+  color: #b0e0e6;
 }
 
 nav ul {
@@ -53,21 +52,24 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: #f5f5f5;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 25px;
-  transition: background 0.3s;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background 0.3s, transform 0.3s;
   background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #26d0ce;
+  color: #121212;
+  transform: scale(1.05);
 }
 
 section {
-  padding: 60px 20px;
+  padding: 70px 30px;
   max-width: 1000px;
   margin: auto;
   animation: fadeInUp 1s ease-out;
@@ -79,37 +81,38 @@ section {
 }
 
 section h2 {
-  color: #1A2980;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  border-bottom: 3px solid #26D0CE;
+  color: #26d0ce;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  border-bottom: 3px solid #00c9ff;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
 section ul {
-  margin-left: 20px;
-  list-style: disc;
-  color: #333;
+  margin-left: 25px;
+  list-style: square;
+  color: #dcdcdc;
 }
 
 .btn-inscribirse {
   display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #00b09b, #96c93d);
-  color: white;
-  font-size: 18px;
+  margin-top: 30px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: #121212;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 50px;
-  transition: background 0.3s, transform 0.3s;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s, transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 6px 20px rgba(0, 201, 255, 0.3);
 }
 
 .btn-inscribirse:hover {
-  background: linear-gradient(135deg, #11998e, #38ef7d);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #4facfe, #38f9d7);
+  transform: scale(1.07);
+  box-shadow: 0 8px 25px rgba(0, 201, 255, 0.5);
 }
 
 form {
@@ -118,53 +121,55 @@ form {
   gap: 15px;
   margin-top: 20px;
   animation: fadeInUp 1s ease-out;
-  background: white;
+  background: #1e1e1e;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 input, textarea {
-  padding: 14px;
-  border: 1px solid #ccc;
+  padding: 16px;
+  border: 1px solid #444;
   border-radius: 8px;
   font-size: 16px;
+  background: #2c2c2c;
+  color: white;
   transition: border-color 0.3s, box-shadow 0.3s;
-  background: #fefefe;
 }
 
 input:focus, textarea:focus {
-  border-color: #26D0CE;
-  box-shadow: 0 0 10px rgba(38, 208, 206, 0.3);
+  border-color: #00c9ff;
+  box-shadow: 0 0 12px rgba(0, 201, 255, 0.3);
   outline: none;
 }
 
 button[type="submit"] {
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to right, #fc466b, #3f5efb);
   color: white;
-  padding: 14px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 20px rgba(252, 70, 107, 0.4);
 }
 
 button[type="submit"]:hover {
-  background: linear-gradient(to right, #5a67d8, #6b46c1);
+  background: linear-gradient(to right, #ff512f, #dd2476);
   transform: scale(1.05);
 }
 
 footer {
-  background: #1A2980;
+  background: #121212;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   position: relative;
   bottom: 0;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   animation: fadeIn 1.5s ease-in;
   border-top: 4px solid #26D0CE;
 }
@@ -176,7 +181,7 @@ footer {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   nav ul {
@@ -189,7 +194,7 @@ footer {
   }
 
   section h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .btn-inscribirse {
